@@ -108,6 +108,20 @@ export async function sayHello() {
   }
 }
 
+export async function showSun() {
+  if (services.ledService) {
+    await services.ledService.writeMatrixState([
+      [1, 0, 1, 0, 1],
+      [0, 1, 1, 1, 0],
+      [1, 1, 1, 1, 1],
+      [0, 1, 1, 1, 0],
+      [1, 0, 1, 0, 1],
+    ]);
+  } else {
+    return;
+  }
+}
+
 function checkConnection() {
   if (device.gatt.connected) {
     console.log('Device still connected');
