@@ -1,7 +1,33 @@
-# Vue 3 + Vite
+# Time-Tracker
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Dieser Time Tracker lässt sich ganz einfach mit einem micro:bit koppeln, kann aber auch ohne micro:bit verwendet werden.
 
-## Recommended IDE Setup
+## Features die immer zur Verfügung stehen
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. Time-Tracking von bis zu vier Aufgaben
+2. Tracking der benötigten PTs auf Basis eines 8-Stunden-Tages
+3. Zurücksetzen einzelner Aufgaben auf die Initialzeit 0
+4. Anpassen der Aufgabenbezeichner und -beschreibungen
+5. Schließen des Infromationskastens durch die **Taste x**
+6. Wechsel in den Bearbeitenmodus (bei geöffnetem Informationskasten) durch die **Taste e**
+
+## Features in Kombination mit dem micro:bit
+
+1. Wahl einer Aufgabe mithilfe des B-Button
+2. Starten oder pausieren der gewählten Aufgabe mithilfe des A-Button
+3. Easter-Eggs: Die Button Herz U+2665 und Sonne U+263C
+
+## Installation
+
+1. Repository klonen
+2.
+
+```bash
+npm install
+```
+
+3.
+
+```bash
+npm run dev
+```
