@@ -1,0 +1,24 @@
+/**
+ * @license
+ *
+ * Font Family: JetBrains Mono
+ * Designed by: JetBrains, Philipp Nurullin, Konstantin Bulenkov
+ * URL: https://www.fontshare.com/fonts/jet-brains-mono
+ * © 2023 Indian Type Foundry
+ *
+ * Font Style:
+ * JetBrains Mono Medium
+ *
+*/
+
+
+@font-face {
+  font-family: 'JetBrainsMono-Medium';
+  src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2'),
+       url('../fonts/JetBrainsMono-Medium.woff') format('woff'),
+       url('../fonts/JetBrainsMono-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
