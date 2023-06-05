@@ -15,7 +15,7 @@ Dieser Time Tracker lässt sich ganz einfach mit einem micro:bit koppeln, kann a
 
 1. Wahl einer Aufgabe mithilfe des B-Button
 2. Starten oder pausieren der gewählten Aufgabe mithilfe des A-Button
-3. Easter-Eggs: Die Button Herz U+2665 und Sonne U+263C
+3. Easter-Eggs: Die Button Herz :hearts: und Sonne :sunny:
 
 ## Installation
 
