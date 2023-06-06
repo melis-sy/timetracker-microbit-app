@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
+import { showPlay, showText } from '../main';
 
 let interval: any;
 
@@ -83,6 +84,7 @@ export const useTaskStore = defineStore('tasks', {
       } else {
         this.currentTaskNumber = 0;
       }
+      showText(this.tasksToUpdate[this.currentTaskNumber].taskName);
     },
     setTasksPaused() {
       this.tasksToUpdate.forEach((myTask) => {
@@ -100,6 +102,7 @@ export const useTaskStore = defineStore('tasks', {
     startStopwatch(i: number) {
       taskIndex = i;
       interval = setInterval(this.tick, 1000);
+      showPlay();
     },
 
     pauseStopwatch() {
