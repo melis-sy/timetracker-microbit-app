@@ -2,7 +2,6 @@
 import { ref, watch } from 'vue';
 import { useTaskStore } from '../../stores/tasks';
 import { useDeviceStore } from '../../stores/device';
-import { useBluetooth } from '@vueuse/core';
 import { sayHello, showSun } from '../../main';
 
 import TaskCard from '../particles/TaskCard.vue';
