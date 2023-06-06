@@ -259,15 +259,6 @@ watch(taskStore, (newTaskStore) => console.log(newTaskStore));
       </button>
     </div>
   </div>
-  <!--
-  <button @click="taskStore.goToNextTask">Klick hier</button>
-  <button @click="taskStore.playPauseHandler">Klick hier als zweites</button>
-
-  <p>{{ taskStore.currentTaskNumber }}</p>
--->
-  <!--
-  <div id="logEl"></div>
-  -->
 </template>
 
 <style scoped>
