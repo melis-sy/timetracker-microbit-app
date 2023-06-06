@@ -99,7 +99,7 @@ document.getElementById('disconnect').onclick = () => {
   }
 };
 
-export async function sayHello() {
+export function sayHello() {
   if (services.ledService) {
     services.ledService.writeText('I <3 Time tracking');
   } else {
@@ -115,6 +115,37 @@ export async function showSun() {
       [1, 1, 1, 1, 1],
       [0, 1, 1, 1, 0],
       [1, 0, 1, 0, 1],
+    ]);
+  } else {
+    return;
+  }
+}
+
+export function showText(inComingTxtInput) {
+  if (services.ledService) {
+    if (inComingTxtInput) {
+      let inComingText = inComingTxtInput.toString().trim();
+      console.log(inComingText);
+      if (inComingText.length >= 18) {
+        inComingText = inComingText.substring(0, 15).concat('...');
+        console.log(inComingText);
+      }
+
+      services.ledService.writeText(inComingText);
+    }
+  } else {
+    return;
+  }
+}
+
+export function showPlay() {
+  if (services.ledService) {
+    services.ledService.writeMatrixState([
+      [0, 1, 0, 0, 0],
+      [0, 1, 1, 1, 0],
+      [0, 1, 1, 1, 1],
+      [0, 1, 1, 1, 0],
+      [0, 1, 0, 0, 0],
     ]);
   } else {
     return;
