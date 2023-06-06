@@ -20,16 +20,15 @@ const deviceStore = useDeviceStore();
 
 let deviceInterval;
 
-//const logEl = document.getElementById('logEl');
-//const log = (message) => (logEl.innerHTML = `${message}\n${logEl.innerHTML}`);
-//const logJson = (message) => log(JSON.stringify(message, null, 2));
 const eventHandler = (event) =>
   console.log(`${event.type}: ${JSON.stringify(event.detail, null, 2)}`);
+
 const eventHandlerButtonA = (event) => {
   if (event.detail === 1) {
     taskStore.playPauseHandler();
   }
 };
+
 const eventHandlerButtonB = (event) => {
   if (event.detail === 1) {
     taskStore.goToNextTask();
