@@ -35,6 +35,10 @@ const eventHandlerButtonB = (event) => {
   }
 };
 
+const eventHandlerTemperatureChanged = async (event) => {
+  document.getElementById('temperaturePlace').innerHTML = event.detail;
+};
+
 document.getElementById('connect').onclick = async () => {
   device = await requestMicrobit(window.navigator.bluetooth);
   console.log(BluetoothRemoteGATTServer);
@@ -77,6 +81,14 @@ document.getElementById('connect').onclick = async () => {
       services.buttonService.addEventListener(
         'buttonbstatechanged',
         eventHandlerButtonB
+      );
+    }
+
+    if (services.temperatureService) {
+      await services.temperatureService.setTemperaturePeriod(2000);
+      services.temperatureService.addEventListener(
+        'temperaturechanged',
+        eventHandlerTemperatureChanged
       );
     }
   }

@@ -106,6 +106,7 @@ watch(taskStore, (newTaskStore) => console.log(newTaskStore));
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </button>
+      <div><span id="temperaturePlace">No data</span> °C</div>
     </div>
   </div>
   <div class="flex">
@@ -180,6 +181,7 @@ watch(taskStore, (newTaskStore) => console.log(newTaskStore));
           ></PlayButton></template
       ></TaskCard>
     </div>
+
     <div
       :class="{
         mFadeOut: !isMoreInformation,
