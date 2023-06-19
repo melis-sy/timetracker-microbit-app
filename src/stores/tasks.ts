@@ -102,7 +102,11 @@ export const useTaskStore = defineStore('tasks', {
     startStopwatch(i: number) {
       taskIndex = i;
       interval = setInterval(this.tick, 1000);
-      showPlay();
+      try {
+        showPlay();
+      } catch (error) {
+        return;
+      }
     },
 
     pauseStopwatch() {
